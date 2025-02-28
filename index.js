@@ -20,4 +20,14 @@ for (let i = 0; i < froyoArray.length; i++) {
 
 console.log(froyoOrder)
 
+function condenseOrder(obj){
+    for (let i = 0; i < Array.length; i++) {
+        let value = Array[i]
+        if (obj[value]) {
+            obj[value]++; 
+        } else { obj[value] = 1; 
+        }
+    }
+}
+
 
