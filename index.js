@@ -11,18 +11,15 @@ console.log(froyoArray)
 function countFlavors(froyoArray){
     let froyoOrder = {};
     for (let i = 0; i < froyoArray.length; i++) {
-        let flavor = froyoArray[i]
-        if (froyoOrder[flavor]) {
-            froyoOrder[flavor]++; 
-        } else { froyoOrder[flavor] = 1; 
+        if (froyoOrder[froyoArray[i]]) {
+            froyoOrder[froyoArray[i]]++; 
+        } else {froyoOrder[froyoArray[i]] = 1; 
         }
 }
 return froyoOrder
 }
 
-const froyoOrder = countFlavors(froyoArray)
-
-console.table(froyoOrder)
+console.table(countFlavors(froyoArray))
 
 
 
